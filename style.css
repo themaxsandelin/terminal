@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #fff;
+}
+
+.console {
+  width: 100vw;
+  min-height: 100vh;
+  background: #000;
+  cursor: text;
+  padding: 20px;
+}
+
+.console .row {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  overflow: hidden;
+}
+
+.console .row:not(:first-child).path {
+  margin-top: 18px;
+}
+
+.console .row.input:before {
+  content: '$';
+  margin-right: 5px;
+}
+
+.console .row:last-child:after {
+  content: '';
+  width: 6px;
+  height: 12px;
+  background: #fff;
+  display: inline-block;
+  transform: translate3d(0px, 2px, 0px);
+}
